@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-  <h1 id="title"></h1>
+  <div><h1 id="title"></h1><small id="sub"></small></div>
   <input type="date" id="date">
 </header>
 <main id="today"></main>
@@ -25,6 +25,10 @@
   <form method="dialog" id="form">
     <input name="name" placeholder="Habit name" required>
     <div id="colors"></div>
+    <div class="seg">
+      <label><input type="radio" name="bad" value="0" checked>Good</label>
+      <label><input type="radio" name="bad" value="1">Bad</label>
+    </div>
     <div class="seg">
       <label><input type="radio" name="max" value="1" checked>Yes / No</label>
       <label><input type="radio" name="max" value="5">Scale</label>
