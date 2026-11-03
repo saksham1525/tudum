@@ -11,25 +11,29 @@
 <title>Tudum</title>
 </head>
 <body>
-<input type="date" id="date">
-<div id="today"></div>
-<h2>Last 7 days</h2>
-<div id="history"></div>
-<p>
-  <button id="add">+ Habit</button>
-  <button id="export">Export</button>
-  <button id="import">Import</button>
-  <input id="file" type="file" accept=".json" hidden>
-</p>
+<header>
+  <h1 id="title"></h1>
+  <input type="date" id="date">
+</header>
+<main id="today"></main>
+<h2><button id="prev">‹</button><span id="wk"></span><button id="next">›</button></h2>
+<section id="history" class="card"></section>
+<footer><button id="export">Export</button><button id="import">Import</button></footer>
+<input id="file" type="file" accept=".json" hidden>
+<button id="add" aria-label="Add habit">+</button>
 <dialog id="dlg">
   <form method="dialog" id="form">
-    <input name="emoji" placeholder="🙂" maxlength="2" size="2">
-    <input name="name" placeholder="Name" required>
+    <input name="name" placeholder="Habit name" required>
     <div id="colors"></div>
-    <select name="max"><option value="1">Yes / No</option><option value="5">Rating (0–5)</option></select>
-    <button value="save">Save</button>
-    <button value="del" id="del" formnovalidate>Delete</button>
-    <button value="cancel" formnovalidate>Cancel</button>
+    <div class="seg">
+      <label><input type="radio" name="max" value="1" checked>Yes / No</label>
+      <label><input type="radio" name="max" value="5">Scale</label>
+    </div>
+    <div class="actions">
+      <button value="save" class="primary">Save</button>
+      <button value="del" id="del" formnovalidate>Delete</button>
+      <button value="cancel" formnovalidate>Cancel</button>
+    </div>
   </form>
 </dialog>
 <script src="app.js"></script>
