@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#111111">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<title>Tudum</title>
+</head>
+<body>
+<h2>Today</h2>
+<div id="today"></div>
+<h2>Last 7 days</h2>
+<div id="history"></div>
+<p>
+  <button id="add">+ Habit</button>
+  <button id="export">Export</button>
+  <button id="import">Import</button>
+  <input id="file" type="file" accept=".json" hidden>
+</p>
+<dialog id="dlg">
+  <form method="dialog" id="form">
+    <input name="emoji" placeholder="🙂" maxlength="2" size="2">
+    <input name="name" placeholder="Name" required>
+    <input name="color" type="color" value="#4ade80">
+    <select name="max"><option value="1">Tick</option><option value="5">Score /5</option></select>
+    <button value="save">Save</button>
+    <button value="del" id="del" formnovalidate>Delete</button>
+    <button value="cancel" formnovalidate>Cancel</button>
+  </form>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>

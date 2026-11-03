@@ -1,0 +1,10 @@
+:root { color-scheme: dark; }
+body { font: 17px system-ui; margin: 0; padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+h2 { font-size: 15px; opacity: .6; text-transform: uppercase; }
+.row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #333; }
+.row .name { flex: 1; }
+.row input[type=checkbox] { width: 28px; height: 28px; }
+.row select { font-size: 17px; }
+.grid { display: grid; grid-template-columns: 1fr repeat(7, 28px); gap: 4px; align-items: center; font-size: 12px; text-align: center; }
+.cell { height: 28px; border-radius: 6px; background: #222; }
+button, input, select { font: inherit; padding: 8px 12px; }
